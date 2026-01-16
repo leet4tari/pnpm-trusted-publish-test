@@ -16,17 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        # Disabled
+        #if: ${{ false }}
+        uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v6
         # Disabled
         #if: ${{ false }}
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-
-      - name: Install pnpm
-        # Disabled
-        if: ${{ false }}
-        uses: pnpm/action-setup@v4
+          cache: 'pnpm'
 
     #  - run: npm ci
       - run: npm run build --if-present
