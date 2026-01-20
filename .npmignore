@@ -1,0 +1,51 @@
+# VCS
+.git
+.gitignore
+.gitattributes
+
+# CI / tooling
+.github/
+.gitlab/
+.circleci/
+.vscode/
+.idea/
+
+# Node / package managers
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build & cache
+.cache/
+.tmp/
+tmp/
+dist/.cache/
+coverage/
+.nyc_output/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Docs & meta (keep README.md intentionally)
+docs/
+examples/
+tests/
+test/
+__tests__/
+*.spec.*
+*.test.*
+
+# TypeScript / source (if publishing built output only)
+src/
+tsconfig*.json
+
+# Env / secrets
+.env
+.env.*
+.npmrc
+
+# Misc
+*.log
